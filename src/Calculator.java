@@ -16,27 +16,32 @@ public class Calculator {
         int y = sc.nextInt();
 
         // Let user choose an operation to run
-        System.out.println("1 - Sum\n" +
-                            "2 - Subtract\n" +
-                            "3 - Divide\n" +
-                            "4 - Multiply\n" +
-                            "Enter a number for an operation: ");
+        System.out.println("""
+                1 - Sum
+                2 - Subtract
+                3 - Divide
+                4 - Multiply
+                Enter a number for an operation:\s""");
         int op = sc.nextInt();
 
         // Switch case to choose an operation
         switch (op) {
-            case 1: int sum = sum(x, y);
+            case 1 -> {
+                int sum = sum(x, y);
                 System.out.println("The result is: " + sum);
-                break;
-            case 2: int sub = sub(x, y);
+            }
+            case 2 -> {
+                int sub = sub(x, y);
                 System.out.println("The result is: " + sub);
-                break;
-            case 3: int div = div(x, y);
+            }
+            case 3 -> {
+                int div = div(x, y);
                 System.out.println("The result is: " + div);
-                break;
-            case 4: int mult = mult(x, y);
+            }
+            case 4 -> {
+                int mult = mult(x, y);
                 System.out.println("The result is: " + mult);
-                break;
+            }
         }
     }
 }
